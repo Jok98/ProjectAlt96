@@ -1,0 +1,25 @@
+https://roadmap.sh/
+TODO :
+
+- github actions
+
+- usare java 21 :
+    - "record" instead of getter e setter
+    - green thread
+
+- try/with
+
+- assert4j for junit
+
+- implementare funzionalità base dell'app
+
+- doker
+
+- utilizzare spring auth
+
+
+
+
+
+
+

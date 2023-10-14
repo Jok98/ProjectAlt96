@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="form-container">
+    <h3>Sign up</h3>
+<form [formGroup]="homeForm" (ngSubmit)="onSubmit()">
+
+  <mat-form-field>
+    <mat-label>Enter your username</mat-label>
+    <input matInput placeholder="" id="userN"  name= "userN" formControlName="userN">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Enter your email</mat-label>
+    <input  matInput placeholder="some@example.com" formControlName="ema" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'"  name= "pass" formControlName="pass" required >
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" >
+
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" class="btnSubmit" [disabled]="!homeForm.valid">Registrati</button>
+
+  <div class="form-group">
+    <a href="/login"  class="rediLog">Hai gia un account?</a>
+</div>
+  </form>
+  </div>
+</div>
+<!-- [formControl]="email" required  -->

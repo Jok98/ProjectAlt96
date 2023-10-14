@@ -1,0 +1,33 @@
+<mat-toolbar>
+  <span>Project alt 96</span>
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="bathroom icon"
+    routerLink="/home"
+  >
+    <mat-icon>home</mat-icon>
+  </button>
+
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="bathroom icon"
+    routerLink="/grafic"
+  >
+    <mat-icon>satellite</mat-icon>
+  </button>
+  <button mat-button [matMenuTriggerFor]="menu" class="menuNav">
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="user icon"
+    >
+      <mat-icon>face</mat-icon>
+    </button>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Impostazioni</button>
+    <button mat-menu-item>Logout</button>
+  </mat-menu>
+</mat-toolbar>

@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  align-self: center;
+  width: 80vw;
+  min-width: min-content;
+  background-color: rgb(83, 83, 83);
+  height: 150vh;
+  align-items: center;
+  align-content: flex-start;
+}
