@@ -1,2 +1,3 @@
 # ProjectAlt96
-web app for manage month expenses
+### Web app for manage month expenses
+# RN in standby, studying microservices architecture for refactoring the project 
