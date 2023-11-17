@@ -1,0 +1,69 @@
+openapi: 3.0.0
+info:
+  title: API per Elementi
+  version: 1.0.0
+paths:
+  /expenses:
+    get:
+      operationId: retriveExpenses
+      summary: return list of expenses
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExpensesResponse'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Not found
+        '405':
+          description: Validation exception
+
+
+components:
+  schemas:
+    ExpensesResponse:
+      type: object
+      properties:
+        expenses:
+          type: array
+          items:
+            $ref: '#/components/schemas/Expense'
+
+    Expense:
+      type: object
+      discriminator:
+        propertyName: id
+      properties:
+        id:
+          type: integer
+        data:
+          type: string
+        descrizione:
+          type: string
+        importo:
+          type: number
+        categoria:
+          type: string
+        note:
+          type: string
+        dataInserimento:
+          type: string
+        dataUltimaModifica:
+          type: string
+        utente:
+          type: string
+        stato:
+          type: string
+        dataApprovazione:
+          type: string
+        dataRifiuto:
+          type: string
+        motivoRifiuto:
+          type: string
+        dataPagamento:
+          type: string
+        metodoPagamento:
+          type: string
