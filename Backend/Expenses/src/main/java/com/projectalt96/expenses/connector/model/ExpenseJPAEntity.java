@@ -17,32 +17,16 @@ public class ExpenseJPAEntity implements Serializable {
     @Id
     private Integer id;
 
-    private String data;
+    private String description;
 
-    private String descrizione;
+    private BigDecimal expense;
 
-    private BigDecimal importo;
-
-    private String categoria;
+    private String category;
 
     private String note;
 
-    private String dataInserimento;
+    private String user;
 
-    private String dataUltimaModifica;
-
-    private String utente;
-
-    private String stato;
-
-    private String dataApprovazione;
-
-    private String dataRifiuto;
-
-    private String motivoRifiuto;
-
-    private String dataPagamento;
-
-    private String metodoPagamento;
+    private String date;
 
 }

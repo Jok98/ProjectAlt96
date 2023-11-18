@@ -1,3 +1,4 @@
 # ProjectAlt96
 ### Web app for manage month expenses
-## RN in standby, studying microservices architecture for refactoring the project 
+## Backend @Jok98 : https://github.com/Jok98
+## Frontend @CodeKratus : https://github.com/CodeKratus

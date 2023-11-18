@@ -32,7 +32,7 @@ import java.util.Map;
 import java.util.Optional;
 import jakarta.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-11-17T20:18:07.219970400+01:00[Europe/Rome]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-11-18T19:04:30.827287700+01:00[Europe/Rome]")
 @Validated
 @Tag(name = "expenses", description = "the expenses API")
 public interface ExpensesApi {
@@ -42,7 +42,7 @@ public interface ExpensesApi {
      *
      * @return Success (status code 200)
      *         or Invalid ID supplied (status code 400)
-     *         or Not found (status code 404)
+     *         or Not found (why) (status code 404)
      *         or Validation exception (status code 405)
      */
     @Operation(
@@ -53,7 +53,7 @@ public interface ExpensesApi {
                 @Content(mediaType = "application/json", schema = @Schema(implementation = ExpensesResponse.class))
             }),
             @ApiResponse(responseCode = "400", description = "Invalid ID supplied"),
-            @ApiResponse(responseCode = "404", description = "Not found"),
+            @ApiResponse(responseCode = "404", description = "Not found (why)"),
             @ApiResponse(responseCode = "405", description = "Validation exception")
         }
     )

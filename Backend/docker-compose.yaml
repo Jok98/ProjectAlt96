@@ -2,6 +2,15 @@ version: '3.7'
 
 
 services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: poly
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./data:/var/lib/mysql
 #  currency-exchange:
 #    image: docker.io/jok98/mmv3-currency-exchange-service:0.0.1-SNAPSHOT
 #    mem_limit: 700m
@@ -28,35 +37,35 @@ services:
 #      EUREKA.CLIENT.SERVICE-URL.DEFAULT-ZONE: http://naming-server:8761/eureka/
 #      MANAGEMENT.ZIPKIN.TRACING.ENDPOINT: http://zipkin-server:9411/api/v2/spans
 
-  api-gateway:
-    image: docker.io/jok98/mmv3-api-gateway:0.0.1-SNAPSHOT
-    mem_limit: 700m
-    ports:
-      - "8765:8675"
-    networks:
-      - currency-network
-    depends_on:
-      - naming-server
-    environment:
-      EUREKA.CLIENT.SERVICE-URL.DEFAULT-ZONE: http://naming-server:8761/eureka/
-      MANAGEMENT.ZIPKIN.TRACING.ENDPOINT: http://zipkin-server:9411/api/v2/spans
-
-  zipkin-server:
-    image: openzipkin/zipkin:2.23
-    mem_limit: 300m
-    ports:
-      - "9411:9411"
-    networks:
-      - expenses-network
-    restart: always #Restart if there is a problem starting up
-
-  naming-server:
-    image: docker.io/jok98/mmv3-naming-server:0.0.1-SNAPSHOT
-    mem_limit: 700m
-    ports:
-      - "8761:8761"
-    networks:
-      - expenses-network
-
-networks:
-  expenses-network:
+#  api-gateway:
+#    image: docker.io/jok98/mmv3-api-gateway:0.0.1-SNAPSHOT
+#    mem_limit: 700m
+#    ports:
+#      - "8765:8675"
+#    networks:
+#      - currency-network
+#    depends_on:
+#      - naming-server
+#    environment:
+#      EUREKA.CLIENT.SERVICE-URL.DEFAULT-ZONE: http://naming-server:8761/eureka/
+#      MANAGEMENT.ZIPKIN.TRACING.ENDPOINT: http://zipkin-server:9411/api/v2/spans
+#
+#  zipkin-server:
+#    image: openzipkin/zipkin:2.23
+#    mem_limit: 300m
+#    ports:
+#      - "9411:9411"
+#    networks:
+#      - expenses-network
+#    restart: always #Restart if there is a problem starting up
+#
+#  naming-server:
+#    image: docker.io/jok98/mmv3-naming-server:0.0.1-SNAPSHOT
+#    mem_limit: 700m
+#    ports:
+#      - "8761:8761"
+#    networks:
+#      - expenses-network
+#
+#networks:
+#  expenses-network:

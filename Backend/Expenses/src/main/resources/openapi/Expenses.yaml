@@ -17,7 +17,7 @@ paths:
         '400':
           description: Invalid ID supplied
         '404':
-          description: Not found
+          description: Not found (why)
         '405':
           description: Validation exception
 
@@ -39,31 +39,15 @@ components:
       properties:
         id:
           type: integer
-        data:
+        description:
           type: string
-        descrizione:
-          type: string
-        importo:
+        expense:
           type: number
-        categoria:
+        category:
           type: string
         note:
           type: string
-        dataInserimento:
+        user:
           type: string
-        dataUltimaModifica:
-          type: string
-        utente:
-          type: string
-        stato:
-          type: string
-        dataApprovazione:
-          type: string
-        dataRifiuto:
-          type: string
-        motivoRifiuto:
-          type: string
-        dataPagamento:
-          type: string
-        metodoPagamento:
+        date:
           type: string

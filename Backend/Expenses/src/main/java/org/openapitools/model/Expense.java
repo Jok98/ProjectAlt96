@@ -23,40 +23,24 @@ import jakarta.annotation.Generated;
  */
 
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-11-17T20:18:07.219970400+01:00[Europe/Rome]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-11-18T19:04:30.827287700+01:00[Europe/Rome]")
 public class Expense implements Serializable {
 
   private static final long serialVersionUID = 1L;
 
   private Integer id;
 
-  private String data;
+  private String description;
 
-  private String descrizione;
+  private BigDecimal expense;
 
-  private BigDecimal importo;
-
-  private String categoria;
+  private String category;
 
   private String note;
 
-  private String dataInserimento;
+  private String user;
 
-  private String dataUltimaModifica;
-
-  private String utente;
-
-  private String stato;
-
-  private String dataApprovazione;
-
-  private String dataRifiuto;
-
-  private String motivoRifiuto;
-
-  private String dataPagamento;
-
-  private String metodoPagamento;
+  private String date;
 
   public Expense id(Integer id) {
     this.id = id;
@@ -78,84 +62,64 @@ public class Expense implements Serializable {
     this.id = id;
   }
 
-  public Expense data(String data) {
-    this.data = data;
+  public Expense description(String description) {
+    this.description = description;
     return this;
   }
 
   /**
-   * Get data
-   * @return data
+   * Get description
+   * @return description
   */
   
-  @Schema(name = "data", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("data")
-  public String getData() {
-    return data;
+  @Schema(name = "description", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @JsonProperty("description")
+  public String getDescription() {
+    return description;
   }
 
-  public void setData(String data) {
-    this.data = data;
+  public void setDescription(String description) {
+    this.description = description;
   }
 
-  public Expense descrizione(String descrizione) {
-    this.descrizione = descrizione;
+  public Expense expense(BigDecimal expense) {
+    this.expense = expense;
     return this;
   }
 
   /**
-   * Get descrizione
-   * @return descrizione
-  */
-  
-  @Schema(name = "descrizione", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("descrizione")
-  public String getDescrizione() {
-    return descrizione;
-  }
-
-  public void setDescrizione(String descrizione) {
-    this.descrizione = descrizione;
-  }
-
-  public Expense importo(BigDecimal importo) {
-    this.importo = importo;
-    return this;
-  }
-
-  /**
-   * Get importo
-   * @return importo
+   * Get expense
+   * @return expense
   */
   @Valid 
-  @Schema(name = "importo", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("importo")
-  public BigDecimal getImporto() {
-    return importo;
+  @Schema(name = "expense", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @JsonProperty("expense")
+  public BigDecimal getExpense() {
+    return expense;
   }
 
-  public void setImporto(BigDecimal importo) {
-    this.importo = importo;
+  public void setExpense(BigDecimal expense) {
+    this.expense = expense;
   }
 
-  public Expense categoria(String categoria) {
-    this.categoria = categoria;
+  public Expense category(String category) {
+    this.category = category;
     return this;
   }
 
   /**
-   * Get categoria
-   * @return categoria
+   * Get category
+   * @return category
   */
   
-  @Schema(name = "categoria", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("categoria")
-  public String getCategoria() {
-    return categoria;
+  @Schema(name = "category", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @JsonProperty("category")
+  public String getCategory() {
+    return category;
   }
 
-  public void setCategoria(String categoria) {
-    this.categoria = categoria;
+  public void setCategory(String category) {
+    this.category = category;
   }
 
   public Expense note(String note) {
@@ -178,184 +142,44 @@ public class Expense implements Serializable {
     this.note = note;
   }
 
-  public Expense dataInserimento(String dataInserimento) {
-    this.dataInserimento = dataInserimento;
+  public Expense user(String user) {
+    this.user = user;
     return this;
   }
 
   /**
-   * Get dataInserimento
-   * @return dataInserimento
+   * Get user
+   * @return user
   */
   
-  @Schema(name = "dataInserimento", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("dataInserimento")
-  public String getDataInserimento() {
-    return dataInserimento;
+  @Schema(name = "user", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @JsonProperty("user")
+  public String getUser() {
+    return user;
   }
 
-  public void setDataInserimento(String dataInserimento) {
-    this.dataInserimento = dataInserimento;
+  public void setUser(String user) {
+    this.user = user;
   }
 
-  public Expense dataUltimaModifica(String dataUltimaModifica) {
-    this.dataUltimaModifica = dataUltimaModifica;
+  public Expense date(String date) {
+    this.date = date;
     return this;
   }
 
   /**
-   * Get dataUltimaModifica
-   * @return dataUltimaModifica
+   * Get date
+   * @return date
   */
   
-  @Schema(name = "dataUltimaModifica", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("dataUltimaModifica")
-  public String getDataUltimaModifica() {
-    return dataUltimaModifica;
+  @Schema(name = "date", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @JsonProperty("date")
+  public String getDate() {
+    return date;
   }
 
-  public void setDataUltimaModifica(String dataUltimaModifica) {
-    this.dataUltimaModifica = dataUltimaModifica;
-  }
-
-  public Expense utente(String utente) {
-    this.utente = utente;
-    return this;
-  }
-
-  /**
-   * Get utente
-   * @return utente
-  */
-  
-  @Schema(name = "utente", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("utente")
-  public String getUtente() {
-    return utente;
-  }
-
-  public void setUtente(String utente) {
-    this.utente = utente;
-  }
-
-  public Expense stato(String stato) {
-    this.stato = stato;
-    return this;
-  }
-
-  /**
-   * Get stato
-   * @return stato
-  */
-  
-  @Schema(name = "stato", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("stato")
-  public String getStato() {
-    return stato;
-  }
-
-  public void setStato(String stato) {
-    this.stato = stato;
-  }
-
-  public Expense dataApprovazione(String dataApprovazione) {
-    this.dataApprovazione = dataApprovazione;
-    return this;
-  }
-
-  /**
-   * Get dataApprovazione
-   * @return dataApprovazione
-  */
-  
-  @Schema(name = "dataApprovazione", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("dataApprovazione")
-  public String getDataApprovazione() {
-    return dataApprovazione;
-  }
-
-  public void setDataApprovazione(String dataApprovazione) {
-    this.dataApprovazione = dataApprovazione;
-  }
-
-  public Expense dataRifiuto(String dataRifiuto) {
-    this.dataRifiuto = dataRifiuto;
-    return this;
-  }
-
-  /**
-   * Get dataRifiuto
-   * @return dataRifiuto
-  */
-  
-  @Schema(name = "dataRifiuto", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("dataRifiuto")
-  public String getDataRifiuto() {
-    return dataRifiuto;
-  }
-
-  public void setDataRifiuto(String dataRifiuto) {
-    this.dataRifiuto = dataRifiuto;
-  }
-
-  public Expense motivoRifiuto(String motivoRifiuto) {
-    this.motivoRifiuto = motivoRifiuto;
-    return this;
-  }
-
-  /**
-   * Get motivoRifiuto
-   * @return motivoRifiuto
-  */
-  
-  @Schema(name = "motivoRifiuto", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("motivoRifiuto")
-  public String getMotivoRifiuto() {
-    return motivoRifiuto;
-  }
-
-  public void setMotivoRifiuto(String motivoRifiuto) {
-    this.motivoRifiuto = motivoRifiuto;
-  }
-
-  public Expense dataPagamento(String dataPagamento) {
-    this.dataPagamento = dataPagamento;
-    return this;
-  }
-
-  /**
-   * Get dataPagamento
-   * @return dataPagamento
-  */
-  
-  @Schema(name = "dataPagamento", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("dataPagamento")
-  public String getDataPagamento() {
-    return dataPagamento;
-  }
-
-  public void setDataPagamento(String dataPagamento) {
-    this.dataPagamento = dataPagamento;
-  }
-
-  public Expense metodoPagamento(String metodoPagamento) {
-    this.metodoPagamento = metodoPagamento;
-    return this;
-  }
-
-  /**
-   * Get metodoPagamento
-   * @return metodoPagamento
-  */
-  
-  @Schema(name = "metodoPagamento", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("metodoPagamento")
-  public String getMetodoPagamento() {
-    return metodoPagamento;
-  }
-
-  public void setMetodoPagamento(String metodoPagamento) {
-    this.metodoPagamento = metodoPagamento;
+  public void setDate(String date) {
+    this.date = date;
   }
 
   @Override
@@ -368,25 +192,17 @@ public class Expense implements Serializable {
     }
     Expense expense = (Expense) o;
     return Objects.equals(this.id, expense.id) &&
-        Objects.equals(this.data, expense.data) &&
-        Objects.equals(this.descrizione, expense.descrizione) &&
-        Objects.equals(this.importo, expense.importo) &&
-        Objects.equals(this.categoria, expense.categoria) &&
+        Objects.equals(this.description, expense.description) &&
+        Objects.equals(this.expense, expense.expense) &&
+        Objects.equals(this.category, expense.category) &&
         Objects.equals(this.note, expense.note) &&
-        Objects.equals(this.dataInserimento, expense.dataInserimento) &&
-        Objects.equals(this.dataUltimaModifica, expense.dataUltimaModifica) &&
-        Objects.equals(this.utente, expense.utente) &&
-        Objects.equals(this.stato, expense.stato) &&
-        Objects.equals(this.dataApprovazione, expense.dataApprovazione) &&
-        Objects.equals(this.dataRifiuto, expense.dataRifiuto) &&
-        Objects.equals(this.motivoRifiuto, expense.motivoRifiuto) &&
-        Objects.equals(this.dataPagamento, expense.dataPagamento) &&
-        Objects.equals(this.metodoPagamento, expense.metodoPagamento);
+        Objects.equals(this.user, expense.user) &&
+        Objects.equals(this.date, expense.date);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, data, descrizione, importo, categoria, note, dataInserimento, dataUltimaModifica, utente, stato, dataApprovazione, dataRifiuto, motivoRifiuto, dataPagamento, metodoPagamento);
+    return Objects.hash(id, description, expense, category, note, user, date);
   }
 
   @Override
@@ -394,20 +210,12 @@ public class Expense implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class Expense {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
-    sb.append("    descrizione: ").append(toIndentedString(descrizione)).append("\n");
-    sb.append("    importo: ").append(toIndentedString(importo)).append("\n");
-    sb.append("    categoria: ").append(toIndentedString(categoria)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    expense: ").append(toIndentedString(expense)).append("\n");
+    sb.append("    category: ").append(toIndentedString(category)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
-    sb.append("    dataInserimento: ").append(toIndentedString(dataInserimento)).append("\n");
-    sb.append("    dataUltimaModifica: ").append(toIndentedString(dataUltimaModifica)).append("\n");
-    sb.append("    utente: ").append(toIndentedString(utente)).append("\n");
-    sb.append("    stato: ").append(toIndentedString(stato)).append("\n");
-    sb.append("    dataApprovazione: ").append(toIndentedString(dataApprovazione)).append("\n");
-    sb.append("    dataRifiuto: ").append(toIndentedString(dataRifiuto)).append("\n");
-    sb.append("    motivoRifiuto: ").append(toIndentedString(motivoRifiuto)).append("\n");
-    sb.append("    dataPagamento: ").append(toIndentedString(dataPagamento)).append("\n");
-    sb.append("    metodoPagamento: ").append(toIndentedString(metodoPagamento)).append("\n");
+    sb.append("    user: ").append(toIndentedString(user)).append("\n");
+    sb.append("    date: ").append(toIndentedString(date)).append("\n");
     sb.append("}");
     return sb.toString();
   }
