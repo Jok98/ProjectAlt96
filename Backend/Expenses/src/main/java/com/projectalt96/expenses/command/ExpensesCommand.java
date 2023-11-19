@@ -12,7 +12,7 @@ import java.util.List;
 public class ExpensesCommand {
     @Autowired
     private ExpenseService expenseService;
-    protected ExpensesResponse doExecute() {
+    public ExpensesResponse doExecute() {
         List<Expense> expenses = expenseService.getExpenses();
         ExpensesResponse expensesResponse = new ExpensesResponse();
         expensesResponse.setExpenses(expenses);

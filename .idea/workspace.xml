@@ -4,20 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189c80a9-363c-4bd0-9c93-fba0b2ae50c3" name="Changes" comment="UPDATED FRONTEND CODE">
-      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/mapper/ExpenseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/service/ExpenseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/SQL/Expense.SQL" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="189c80a9-363c-4bd0-9c93-fba0b2ae50c3" name="Changes" comment="Finished creating expense architecture, /expenses get call not visible with postman TODO : resolve">
+      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/test/java/com/projectalt96/expenses/service/ExpenseServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/.openapi-generator/Expenses.yaml-Expenses.sha256" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/.openapi-generator/Expenses.yaml-Expenses.sha256" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/command/ExpensesCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/command/ExpensesCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/connector/model/ExpenseJPAEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/connector/model/ExpenseJPAEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/connector/ExpenseJPARepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/connector/ExpenseJPARepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/controller/ExpensesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/controller/ExpensesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/org/openapitools/api/ExpensesApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/org/openapitools/api/ExpensesApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/org/openapitools/model/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/org/openapitools/model/Expense.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/org/openapitools/model/ExpensesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/org/openapitools/model/ExpensesResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/openapi/Expenses.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/openapi/Expenses.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/test/java/com/projectalt96/expenses/Expenses/ExpensesApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/jokmo/IdeaProjects/ProjectAlt96/backend/Expenses/src/main/java/com/projectalt96/expenses/connector&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jokmo/IdeaProjects/ProjectAlt96&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jokmo/IdeaProjects/ProjectAlt96/backend/spring-cloud-config-server&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -114,33 +113,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExpensesDaoTest.getByUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProjectAlt96" />
+    <configuration name="ExpenseServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Expenses" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.project.ProjectAlt96.model.dao.*" />
+          <option name="PATTERN" value="com.projectalt96.expenses.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.project.ProjectAlt96.model.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.project.ProjectAlt96.model.dao.ExpensesDaoTest" />
-      <option name="METHOD_NAME" value="getByUsername" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.projectalt96.expenses.service" />
+      <option name="MAIN_CLASS_NAME" value="com.projectalt96.expenses.service.ExpenseServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExpensesDaoTest.token" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProjectAlt96" />
+    <configuration name="ExpenseServiceTest.testGetExpenses" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Expenses" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.project.ProjectAlt96.model.dao.*" />
+          <option name="PATTERN" value="com.projectalt96.expenses.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.project.ProjectAlt96.model.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.project.ProjectAlt96.model.dao.ExpensesDaoTest" />
-      <option name="METHOD_NAME" value="token" />
+      <option name="PACKAGE_NAME" value="com.projectalt96.expenses.service" />
+      <option name="MAIN_CLASS_NAME" value="com.projectalt96.expenses.service.ExpenseServiceTest" />
+      <option name="METHOD_NAME" value="testGetExpenses" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -211,17 +209,17 @@
       <item itemvalue="Application.ExpensesApplication" />
       <item itemvalue="Docker.backend/docker-compose.yaml.db: Compose Deployment" />
       <item itemvalue="Docker.backend/docker-compose.yaml.api-gateway: Compose Deployment" />
-      <item itemvalue="JUnit.ExpensesDaoTest.getByUsername" />
-      <item itemvalue="JUnit.ExpensesDaoTest.token" />
+      <item itemvalue="JUnit.ExpenseServiceTest" />
+      <item itemvalue="JUnit.ExpenseServiceTest.testGetExpenses" />
       <item itemvalue="Maven.ProjectAlt96" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ExpensesApplication" />
+        <item itemvalue="JUnit.ExpenseServiceTest.testGetExpenses" />
+        <item itemvalue="JUnit.ExpenseServiceTest" />
         <item itemvalue="Docker.backend/docker-compose.yaml.db: Compose Deployment" />
         <item itemvalue="Docker.backend/docker-compose.yaml.api-gateway: Compose Deployment" />
-        <item itemvalue="JUnit.ExpensesDaoTest.token" />
-        <item itemvalue="JUnit.ExpensesDaoTest.getByUsername" />
       </list>
     </recent_temporary>
   </component>
@@ -370,7 +368,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697398911766</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Finished creating expense architecture, /expenses get call not visible with postman TODO : resolve">
+      <option name="closed" value="true" />
+      <created>1700332120321</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1700332120321</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -403,7 +409,8 @@
     <MESSAGE value="- created restcontroller for login todo : test&#10;- id now is Long&#10;- Expeses lazyexc fixed" />
     <MESSAGE value="todo : understand why the call with postman isnt working" />
     <MESSAGE value="UPDATED FRONTEND CODE" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATED FRONTEND CODE" />
+    <MESSAGE value="Finished creating expense architecture, /expenses get call not visible with postman TODO : resolve" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished creating expense architecture, /expenses get call not visible with postman TODO : resolve" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -412,6 +419,26 @@
           <url>file://$PROJECT_DIR$/backend/src/test/java/com/project/ProjectAlt96/controller/UtilsTest.java</url>
           <line>55</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/expenses/controller/TestController.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/expenses/controller/TestController.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/expenses/command/ExpensesCommand.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/expenses/boot/ExpensesApplication.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

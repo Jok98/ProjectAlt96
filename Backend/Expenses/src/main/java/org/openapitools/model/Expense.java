@@ -23,7 +23,7 @@ import jakarta.annotation.Generated;
  */
 
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-11-18T19:04:30.827287700+01:00[Europe/Rome]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-11-18T20:30:34.982652700+01:00[Europe/Rome]")
 public class Expense implements Serializable {
 
   private static final long serialVersionUID = 1L;
