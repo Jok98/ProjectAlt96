@@ -104,11 +104,12 @@
 						</goals>
 						<configuration>
 							<inputSpec>
-								${project.basedir}/src/main/resources/swagger/Expense.yml
+								${project.basedir}/src/main/resources/openapi/Expense.yml
 							</inputSpec>
-							<generatorName>spring</generatorName>
-							<apiPackage>com.openapi.gen.springboot.api</apiPackage>
-							<modelPackage>com.openapi.gen.springboot.dto</modelPackage>
+							<generatorName>spring</generatorName> <!-- set the generation type-->
+<!--							backend/Expenses/target/classes/com/projectalt96/Expenses/gen-->
+							<apiPackage>com.projectalt96.Expenses.api</apiPackage>
+							<modelPackage>com.projectalt96.Expenses.dto</modelPackage>
 							<supportingFilesToGenerate>
 								ApiUtil.java
 							</supportingFilesToGenerate>

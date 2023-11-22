@@ -4,27 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189c80a9-363c-4bd0-9c93-fba0b2ae50c3" name="Changes" comment="update general-config cloud server">
-      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/swagger/Expense.yml" afterDir="false" />
+    <list default="true" id="189c80a9-363c-4bd0-9c93-fba0b2ae50c3" name="Changes" comment="expense project refactor">
+      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/openapi/Expense.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/.openapi-generator/Expenses.yaml-Expenses.sha256" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Expenses/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/boot/ExpensesApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/command/ExpensesCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/connector/ExpenseJPARepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/connector/model/ExpenseJPAEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/controller/ExpensesController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/controller/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/mapper/ExpenseMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/service/ExpenseService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/org/openapitools/api/ExpensesApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/org/openapitools/model/Expense.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/org/openapitools/model/ExpensesResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/SQL/Expense.SQL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/openapi/Expenses.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/test/java/com/projectalt96/expenses/service/ExpenseServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/spring-cloud-config-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/spring-cloud-config-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/swagger/Expense.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -440,7 +424,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700388648937</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="expense project refactor">
+      <option name="closed" value="true" />
+      <created>1700635596900</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1700635596900</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -478,7 +470,8 @@
     <MESSAGE value="Update GeneralConfig.txt" />
     <MESSAGE value="general-config cloud server" />
     <MESSAGE value="update general-config cloud server" />
-    <option name="LAST_COMMIT_MESSAGE" value="update general-config cloud server" />
+    <MESSAGE value="expense project refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="expense project refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

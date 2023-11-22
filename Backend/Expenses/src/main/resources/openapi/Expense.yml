@@ -4,16 +4,16 @@ info:
   version: "1"
   description: Expense API
 
-servers:
-  - url: http://localhost:8080/expenses
-    description: Local server
+#servers:
+#  - url: http://localhost:8080/expenses
+#    description: Local server
 
 paths:
 
   /expense:
     post:
       summary: Save Expense
-      operationId: saveExpense
+      operationId: saveExpense #is the name of the method in the controller
       requestBody:
         content:
           application/json:
