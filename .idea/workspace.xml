@@ -4,10 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189c80a9-363c-4bd0-9c93-fba0b2ae50c3" name="Changes" comment="Update GeneralConfig.txt">
+    <list default="true" id="189c80a9-363c-4bd0-9c93-fba0b2ae50c3" name="Changes" comment="update general-config cloud server">
+      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/swagger/Expense.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/.openapi-generator/Expenses.yaml-Expenses.sha256" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/boot/ExpensesApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/command/ExpensesCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/connector/ExpenseJPARepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/connector/model/ExpenseJPAEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/controller/ExpensesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/controller/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/mapper/ExpenseMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/service/ExpenseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/org/openapitools/api/ExpensesApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/org/openapitools/model/Expense.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/org/openapitools/model/ExpensesResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/SQL/Expense.SQL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/openapi/Expenses.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/test/java/com/projectalt96/expenses/service/ExpenseServiceTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/spring-cloud-config-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/spring-cloud-config-server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/general-config.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +45,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -35,6 +53,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="localRepository" value="C:\Users\jokmo\.m2\repository" />
         <option name="mavenHome" value="Use Maven wrapper" />
       </MavenGeneralSettings>
     </option>
@@ -72,7 +91,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propCompiler"
+    "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -98,7 +117,7 @@
       <recent name="com.project.ProjectAlt96.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SpringCloudConfigServerApplication">
+  <component name="RunManager" selected="Application.com.projectalt96.Expenses.ExpensesApplication">
     <configuration name="ExpensesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.projectalt96.expenses.boot.ExpensesApplication" />
       <module name="Expenses" />
@@ -125,17 +144,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExpenseServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.projectalt96.Expenses.ExpensesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.projectalt96.Expenses.ExpensesApplication" />
       <module name="Expenses" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.projectalt96.expenses.service.*" />
+          <option name="PATTERN" value="com.projectalt96.Expenses.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.projectalt96.expenses.service" />
-      <option name="MAIN_CLASS_NAME" value="com.projectalt96.expenses.service.ExpenseServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -205,20 +222,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.com.projectalt96.Expenses.ExpensesApplication" />
       <item itemvalue="Application.SpringCloudConfigServerApplication" />
       <item itemvalue="Application.ExpensesApplication" />
       <item itemvalue="Docker.backend/docker-compose.yaml.db: Compose Deployment" />
-      <item itemvalue="JUnit.ExpenseServiceTest" />
       <item itemvalue="JUnit.ExpenseServiceTest.testGetExpenses" />
       <item itemvalue="Maven.ProjectAlt96" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SpringCloudConfigServerApplication" />
+        <item itemvalue="Application.com.projectalt96.Expenses.ExpensesApplication" />
         <item itemvalue="Application.ExpensesApplication" />
-        <item itemvalue="JUnit.ExpenseServiceTest.testGetExpenses" />
-        <item itemvalue="JUnit.ExpenseServiceTest" />
+        <item itemvalue="Application.SpringCloudConfigServerApplication" />
         <item itemvalue="Docker.backend/docker-compose.yaml.db: Compose Deployment" />
+        <item itemvalue="JUnit.ExpenseServiceTest.testGetExpenses" />
       </list>
     </recent_temporary>
   </component>
@@ -399,7 +416,31 @@
       <option name="project" value="LOCAL" />
       <updated>1700385290336</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="general-config cloud server">
+      <option name="closed" value="true" />
+      <created>1700388352490</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1700388352490</updated>
+    </task>
+    <task id="LOCAL-00023" summary="update general-config cloud server">
+      <option name="closed" value="true" />
+      <created>1700388562595</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1700388562595</updated>
+    </task>
+    <task id="LOCAL-00024" summary="update general-config cloud server">
+      <option name="closed" value="true" />
+      <created>1700388648937</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1700388648937</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -435,7 +476,9 @@
     <MESSAGE value="Finished creating expense architecture, /expenses get call not visible with postman TODO : resolve" />
     <MESSAGE value="Created spring-cloud-config-server" />
     <MESSAGE value="Update GeneralConfig.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update GeneralConfig.txt" />
+    <MESSAGE value="general-config cloud server" />
+    <MESSAGE value="update general-config cloud server" />
+    <option name="LAST_COMMIT_MESSAGE" value="update general-config cloud server" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -446,23 +489,23 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/expenses/controller/TestController.java</url>
+          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/Expenses/controller/TestController.java</url>
           <line>17</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/expenses/controller/TestController.java</url>
+          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/Expenses/controller/TestController.java</url>
           <line>12</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/expenses/command/ExpensesCommand.java</url>
+          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/Expenses/command/ExpensesCommand.java</url>
           <line>15</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/expenses/boot/ExpensesApplication.java</url>
-          <line>9</line>
+          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/Expenses/ExpensesApplication.java</url>
+          <line>6</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>

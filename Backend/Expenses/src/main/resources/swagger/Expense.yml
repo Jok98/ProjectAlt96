@@ -1,0 +1,69 @@
+openapi: "3.0.1"
+info:
+  title: "Expense"
+  version: "1"
+  description: Expense API
+
+servers:
+  - url: http://localhost:8080/expenses
+    description: Local server
+
+paths:
+
+  /expense:
+    post:
+      summary: Save Expense
+      operationId: saveExpense
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExpenseDTO'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExpenseDTO'
+
+  /expense/{id}:
+    get:
+      summary: Get Expense By Id
+      operationId: getExpenseById
+      parameters:
+        - name: id
+          in: path
+          description: Unique Id of an Expense
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExpenseDTO'
+
+components:
+    schemas:
+      ExpenseDTO:
+        type: object
+        description: Data element for Expense
+        required:
+          - email
+        properties:
+          id:
+            type: string
+          name:
+            type: string
+          description:
+            type: string
+          amount:
+            type: number
+          date:
+            type: string
+            format: date
+          category:
+            type: string
