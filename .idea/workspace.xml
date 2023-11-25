@@ -4,11 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189c80a9-363c-4bd0-9c93-fba0b2ae50c3" name="Changes" comment="expense project refactor">
-      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/openapi/Expense.yml" afterDir="false" />
+    <list default="true" id="189c80a9-363c-4bd0-9c93-fba0b2ae50c3" name="Changes" comment="swagger-ui working, cod gen must be on the same package of boot app">
+      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/delegate/ExpenseDelegateImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/service/ExpensesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/openapi/Expenses.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/connector/jpa/expenses/ExpensesJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/connector/jpa/expenses/model/ExpenseJpa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/delegate/expenses/ExpenseDelegateImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/mapper/expenses/ExpensesMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/service/expenses/ExpensesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/resources/expense.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/resources/openapi/Expenses.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Expenses/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/swagger/Expense.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/openapi/Expense.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +69,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
@@ -71,18 +82,20 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last_directory_selection": "C:/Users/jokmo/IdeaProjects/ProjectAlt96/backend/Expenses/src/main/java/com/projectalt96/expenses/connector",
-    "last_opened_file_path": "C:/Users/jokmo/IdeaProjects/ProjectAlt96/Config",
+    "last_opened_file_path": "C:/Users/jokmo/IdeaProjects/free_be-core",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings"
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.projectalt96.core.connector.jpa.expenses.model" />
       <recent name="com.projectalt96.expenses.connector" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jokmo\IdeaProjects\ProjectAlt96\backend\core\src\main\resources\openapi" />
       <recent name="C:\Users\jokmo\IdeaProjects\ProjectAlt96\Config" />
       <recent name="C:\Users\jokmo\IdeaProjects\ProjectAlt96\backend" />
     </key>
@@ -101,7 +114,20 @@
       <recent name="com.project.ProjectAlt96.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.projectalt96.Expenses.ExpensesApplication">
+  <component name="RunManager" selected="Application.CoreApplication">
+    <configuration name="CoreApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.projectalt96.core.CoreApplication" />
+      <module name="core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.projectalt96.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ExpensesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.projectalt96.expenses.boot.ExpensesApplication" />
       <module name="Expenses" />
@@ -137,22 +163,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ExpenseServiceTest.testGetExpenses" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Expenses" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.projectalt96.expenses.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.projectalt96.expenses.service" />
-      <option name="MAIN_CLASS_NAME" value="com.projectalt96.expenses.service.ExpenseServiceTest" />
-      <option name="METHOD_NAME" value="testGetExpenses" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -206,20 +216,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.CoreApplication" />
       <item itemvalue="Application.com.projectalt96.Expenses.ExpensesApplication" />
       <item itemvalue="Application.SpringCloudConfigServerApplication" />
       <item itemvalue="Application.ExpensesApplication" />
       <item itemvalue="Docker.backend/docker-compose.yaml.db: Compose Deployment" />
-      <item itemvalue="JUnit.ExpenseServiceTest.testGetExpenses" />
       <item itemvalue="Maven.ProjectAlt96" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CoreApplication" />
+        <item itemvalue="Docker.backend/docker-compose.yaml.db: Compose Deployment" />
         <item itemvalue="Application.com.projectalt96.Expenses.ExpensesApplication" />
         <item itemvalue="Application.ExpensesApplication" />
         <item itemvalue="Application.SpringCloudConfigServerApplication" />
-        <item itemvalue="Docker.backend/docker-compose.yaml.db: Compose Deployment" />
-        <item itemvalue="JUnit.ExpenseServiceTest.testGetExpenses" />
       </list>
     </recent_temporary>
   </component>
@@ -432,7 +442,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700635596900</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="swagger-ui working, cod gen must be on the same package of boot app">
+      <option name="closed" value="true" />
+      <created>1700642027759</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1700642027759</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -471,7 +489,8 @@
     <MESSAGE value="general-config cloud server" />
     <MESSAGE value="update general-config cloud server" />
     <MESSAGE value="expense project refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="expense project refactor" />
+    <MESSAGE value="swagger-ui working, cod gen must be on the same package of boot app" />
+    <option name="LAST_COMMIT_MESSAGE" value="swagger-ui working, cod gen must be on the same package of boot app" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -500,6 +519,11 @@
           <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/Expenses/ExpensesApplication.java</url>
           <line>6</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/core/src/main/java/com/projectalt96/core/CoreApplication.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

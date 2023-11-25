@@ -1,0 +1,130 @@
+openapi: "3.0.1"
+info:
+  title: "Expense"
+  version: "1"
+  description: Expenses Api
+
+#servers:
+#  - url: http://localhost:8080/expenses
+#    description: Local server
+
+paths:
+
+  /expense:
+    get:
+      summary: Expenses List
+      operationId: getExpensesList
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecuperaTodosResponse'
+        '404':
+          description: No expenses found
+
+    post:
+      summary: Save Expense
+      operationId: saveExpense #is the name of the method in the controller
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExpenseDTO'
+      responses:
+        200:
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExpenseDTO'
+
+  /expense/{id}:
+    get:
+      summary: Get Expense By Id
+      operationId: getExpenseById
+      parameters:
+        - name: id
+          in: path
+          description: Unique Id of an Expense
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExpenseDTO'
+
+    put:
+      summary: Update Expense By Id
+      operationId: updateExpenseById
+      parameters:
+        - name: id
+          in: path
+          description: Unique Id of an Expense
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExpenseDTO'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExpenseDTO'
+
+    delete:
+      summary: Delete Expense By Id
+      operationId: deleteExpenseById
+      parameters:
+        - name: id
+          in: path
+          description: Unique Id of an Expense
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExpenseDTO'
+components:
+  schemas:
+    RetrieveExpensesResponse:
+      type: object
+      properties:
+        widgets:
+          type: array
+          items:
+            $ref: '#/components/schemas/ExpenseDTO'
+
+    ExpenseDTO:
+      type: object
+      description: Data element for Expense
+      required:
+        - email
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        amount:
+          type: number
+        date:
+          type: string
+          format: date
+        category:
+          type: string

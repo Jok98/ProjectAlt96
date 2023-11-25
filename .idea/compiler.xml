@@ -8,12 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Expenses" />
-        <module name="spring-cloud-config-server" />
+        <module name="core" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="backend" target="17" />
       <module name="ProjectAlt96" target="17" />
+      <module name="spring-cloud-config-server" target="17" />
       <module name="swagger-spring" target="1.7" />
     </bytecodeTargetLevel>
   </component>
@@ -22,6 +23,7 @@
       <module name="Expenses" options="-parameters" />
       <module name="ProjectAlt96" options="-parameters" />
       <module name="backend" options="-parameters" />
+      <module name="core" options="-parameters" />
       <module name="spring-cloud-config-server" options="-parameters" />
       <module name="swagger-spring" options="-parameters" />
     </option>

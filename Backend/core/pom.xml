@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.projectalt96</groupId>
-	<artifactId>Expenses</artifactId>
+	<artifactId>core</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Expenses</name>
-	<description>BFF Expenses</description>
+	<name>core</name>
+	<description>Core for ProjectAlt96</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -80,6 +80,23 @@
 			<version>4.0.1</version>
 		</dependency>
 
+<!--		DB-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -107,9 +124,9 @@
 								${project.basedir}/src/main/resources/openapi/Expenses.yml
 							</inputSpec>
 							<generatorName>spring</generatorName> <!-- set the generation type-->
-<!--							backend/Expenses/target/classes/com/projectalt96/Expenses/gen-->
-							<apiPackage>com.projectalt96.Expenses.api</apiPackage>
-							<modelPackage>com.projectalt96.Expenses.dto</modelPackage>
+							<!--							backend/Expenses/target/classes/com/projectalt96/Expenses/gen-->
+							<apiPackage>com.projectalt96.core.api</apiPackage>
+							<modelPackage>com.projectalt96.core.dto</modelPackage>
 							<supportingFilesToGenerate>
 								ApiUtil.java
 							</supportingFilesToGenerate>
