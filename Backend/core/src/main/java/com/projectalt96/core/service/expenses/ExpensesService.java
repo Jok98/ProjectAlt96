@@ -13,13 +13,9 @@ import java.util.List;
 public class ExpensesService {
     @Autowired
     ExpensesJpaRepository expensesJpaRepository;
-    @Autowired
-    ExpensesMapper expensesMapper;
-
     public List<ExpenseJpa> getExpensesList(){
         List<ExpenseJpa> expenseJpaList = expensesJpaRepository.findAll();
         return expenseJpaList;
     }
-
 
 }
