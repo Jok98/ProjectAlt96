@@ -33,6 +33,7 @@ public class ExpenseDelegateImpl implements ExpenseApiDelegate {
         expenseJpaList.forEach(expenseJpa -> {
             expenseDTOList.add(expensesMapper.expenseJpaEntityToExpense(expenseJpa));
         });
+        System.out.println(expenseDTOList);
         responseEntity.setExpenses(expenseDTOList);
         return ResponseEntity.ok(responseEntity);
     }

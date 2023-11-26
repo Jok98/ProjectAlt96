@@ -20,7 +20,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RecuperaTodosResponse'
+                $ref: '#/components/schemas/RetrieveExpensesResponse'
         '404':
           description: No expenses found
 
@@ -104,7 +104,7 @@ components:
     RetrieveExpensesResponse:
       type: object
       properties:
-        widgets:
+        expenses:
           type: array
           items:
             $ref: '#/components/schemas/ExpenseDTO'
