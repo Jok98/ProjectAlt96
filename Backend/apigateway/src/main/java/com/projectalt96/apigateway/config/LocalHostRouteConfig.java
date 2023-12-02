@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 public class LocalHostRouteConfig {
     @Bean
     public RouteLocator localHostRoutes(RouteLocatorBuilder builder) {
+
         return builder.routes()
                 .route(r -> r.path("/expense")
                         .uri("http://localhost:8090"))

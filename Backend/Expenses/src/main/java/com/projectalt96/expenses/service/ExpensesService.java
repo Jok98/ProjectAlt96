@@ -1,28 +1,19 @@
-package com.projectalt96.Expenses.service;
+package com.projectalt96.expenses.service;
 
-import com.projectalt96.Expenses.dto.ExpenseDTO;
-import org.springframework.http.MediaType;
+import com.projectalt96.expenses.connector.FeignClientConnectorInterface;
+import com.projectalt96.expenses.dto.RetrieveExpensesResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Mono;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 
 @Service
 public class ExpensesService {
-    public List<ExpenseDTO> getExpensesList() {
-        List<ExpenseDTO> expenseDTO = new ArrayList<>();
-        WebClient client = WebClient.create("http://localhost:8090");
-        Mono<ResponseEntity<List<ExpenseDTO>>> result = client.get()
-                .uri("/expense").accept(MediaType.APPLICATION_JSON)
-                .retrieve()
-                .toEntityList(ExpenseDTO.class);
-        expenseDTO = result.block().getBody();
-        System.out.println(result);
-        System.out.println(expenseDTO);
-        return expenseDTO;
+    @Autowired
+    FeignClientConnectorInterface feignClientConnectorInterface;
+
+    public ResponseEntity<RetrieveExpensesResponse> getExpensesList() {
+        ResponseEntity<RetrieveExpensesResponse> result = feignClientConnectorInterface.getExpensesList();
+        result.getBody().getExpenses().forEach(System.out::println);
+        return result;
     }
 }

@@ -1,9 +1,8 @@
-package com.projectalt96.Expenses.delegate;
+package com.projectalt96.expenses.delegate;
 
-import com.projectalt96.Expenses.api.ExpenseApiDelegate;
-import com.projectalt96.Expenses.dto.ExpenseDTO;
-import com.projectalt96.Expenses.dto.RetrieveExpensesResponse;
-import com.projectalt96.Expenses.service.ExpensesService;
+import com.projectalt96.expenses.api.ExpenseApiDelegate;
+import com.projectalt96.expenses.dto.RetrieveExpensesResponse;
+import com.projectalt96.expenses.service.ExpensesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -19,8 +18,7 @@ public class ExpenseDelegateImpl implements ExpenseApiDelegate {
 
     @Override
     public ResponseEntity<RetrieveExpensesResponse> getExpensesList() {
-        RetrieveExpensesResponse responseEntity = new RetrieveExpensesResponse();
-        responseEntity.setExpenses(expensesService.getExpensesList());
+        RetrieveExpensesResponse responseEntity = expensesService.getExpensesList().getBody();
         return ResponseEntity.ok(responseEntity);
     }
 }

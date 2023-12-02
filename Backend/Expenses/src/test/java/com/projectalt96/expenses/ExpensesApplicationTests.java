@@ -1,4 +1,4 @@
-package com.projectalt96.Expenses;
+package com.projectalt96.expenses;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

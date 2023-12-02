@@ -96,6 +96,19 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<version>4.0.3</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<version>4.0.4</version>
+		</dependency>
 
 	</dependencies>
 
@@ -124,7 +137,7 @@
 								${project.basedir}/src/main/resources/openapi/Expenses.yml
 							</inputSpec>
 							<generatorName>spring</generatorName> <!-- set the generation type-->
-							<!--							backend/Expenses/target/classes/com/projectalt96/Expenses/gen-->
+							<!--							backend/expenses/target/classes/com/projectalt96/expenses/gen-->
 							<apiPackage>com.projectalt96.core.api</apiPackage>
 							<modelPackage>com.projectalt96.core.dto</modelPackage>
 							<supportingFilesToGenerate>

@@ -4,28 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189c80a9-363c-4bd0-9c93-fba0b2ae50c3" name="Changes" comment="swagger-ui working, cod gen must be on the same package of boot app">
-      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/delegate/ExpenseDelegateImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/service/ExpensesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/openapi/Expenses.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/connector/jpa/expenses/ExpensesJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/connector/jpa/expenses/model/ExpenseJpa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/delegate/expenses/ExpenseDelegateImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/mapper/expenses/ExpensesMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/service/expenses/ExpensesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/resources/expense.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/resources/openapi/Expenses.yml" afterDir="false" />
+    <list default="true" id="189c80a9-363c-4bd0-9c93-fba0b2ae50c3" name="Changes" comment="created apigateway and eureka server need to implement service registration">
+      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/config/EurekaClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/connector/FeignClientConnectorInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/projectalt96/apigateway/config/EurekaClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/projectalt96/apigateway/filter/LoggingGlobalFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/config/EurekaClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/model/ExpenseDTOWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Expenses/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/openapi/Expense.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/ExpensesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/ExpensesApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/delegate/ExpenseDelegateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/delegate/ExpenseDelegateImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/service/ExpensesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/service/ExpensesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/test/java/com/projectalt96/expenses/ExpensesApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/test/java/com/projectalt96/expenses/ExpensesApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/apigateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/apigateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/projectalt96/apigateway/ApigatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/projectalt96/apigateway/ApigatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/projectalt96/apigateway/config/LocalHostRouteConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/projectalt96/apigateway/config/LocalHostRouteConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/apigateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/apigateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/config_info.md" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/config_info.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/CoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/CoreApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/delegate/expenses/ExpenseDelegateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/delegate/expenses/ExpenseDelegateImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/core/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/core/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/core/src/main/resources/openapi/Expenses.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/core/src/main/resources/openapi/Expenses.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/eurekaserver/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/eurekaserver/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
@@ -41,7 +56,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -82,11 +96,11 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last_directory_selection": "C:/Users/jokmo/IdeaProjects/ProjectAlt96/backend/Expenses/src/main/java/com/projectalt96/expenses/connector",
-    "last_opened_file_path": "C:/Users/jokmo/IdeaProjects/free_be-core",
+    "last_opened_file_path": "C:/Users/jokmo/IdeaProjects/ProjectAlt96/backend/core/src/main/java/com/projectalt96/core",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.keymap"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -95,6 +109,7 @@
       <recent name="com.projectalt96.expenses.connector" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jokmo\IdeaProjects\ProjectAlt96\backend\core\src\main\java\com\projectalt96\core" />
       <recent name="C:\Users\jokmo\IdeaProjects\ProjectAlt96\backend\core\src\main\resources\openapi" />
       <recent name="C:\Users\jokmo\IdeaProjects\ProjectAlt96\Config" />
       <recent name="C:\Users\jokmo\IdeaProjects\ProjectAlt96\backend" />
@@ -113,8 +128,24 @@
       <recent name="com.project.ProjectAlt96.model.pojo" />
       <recent name="com.project.ProjectAlt96.controller" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.projectalt96.apigateway.config" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.CoreApplication">
+  <component name="RunManager" selected="Application.ApigatewayApplication">
+    <configuration name="ApigatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.projectalt96.apigateway.ApigatewayApplication" />
+      <module name="apigateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.projectalt96.apigateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CoreApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.projectalt96.core.CoreApplication" />
       <module name="core" />
@@ -128,38 +159,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EurekaserverApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.projectalt96.eurekaserver.EurekaserverApplication" />
+      <module name="eurekaserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.projectalt96.eurekaserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ExpensesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.projectalt96.expenses.boot.ExpensesApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.projectalt96.expenses.ExpensesApplication" />
       <module name="Expenses" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.projectalt96.expenses.boot.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpringCloudConfigServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.projectalt96.cloudconfig.springcloudconfigserver.SpringCloudConfigServerApplication" />
-      <module name="spring-cloud-config-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.projectalt96.cloudconfig.springcloudconfigserver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.projectalt96.Expenses.ExpensesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.projectalt96.Expenses.ExpensesApplication" />
-      <module name="Expenses" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.projectalt96.Expenses.*" />
+          <option name="PATTERN" value="com.projectalt96.expenses.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -216,20 +234,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.ApigatewayApplication" />
+      <item itemvalue="Application.EurekaserverApplication" />
       <item itemvalue="Application.CoreApplication" />
       <item itemvalue="Application.com.projectalt96.Expenses.ExpensesApplication" />
-      <item itemvalue="Application.SpringCloudConfigServerApplication" />
-      <item itemvalue="Application.ExpensesApplication" />
       <item itemvalue="Docker.backend/docker-compose.yaml.db: Compose Deployment" />
       <item itemvalue="Maven.ProjectAlt96" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ApigatewayApplication" />
+        <item itemvalue="Application.EurekaserverApplication" />
         <item itemvalue="Application.CoreApplication" />
-        <item itemvalue="Docker.backend/docker-compose.yaml.db: Compose Deployment" />
         <item itemvalue="Application.com.projectalt96.Expenses.ExpensesApplication" />
-        <item itemvalue="Application.ExpensesApplication" />
-        <item itemvalue="Application.SpringCloudConfigServerApplication" />
+        <item itemvalue="Docker.backend/docker-compose.yaml.db: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -450,7 +468,39 @@
       <option name="project" value="LOCAL" />
       <updated>1700642027759</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="created core implemented api /expense GET to return all the expenses">
+      <option name="closed" value="true" />
+      <created>1700928396120</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1700928396120</updated>
+    </task>
+    <task id="LOCAL-00028" summary="created documentation for the project architecture">
+      <option name="closed" value="true" />
+      <created>1700932083771</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1700932083771</updated>
+    </task>
+    <task id="LOCAL-00029" summary="implemented webclient call to core api /expense GET">
+      <option name="closed" value="true" />
+      <created>1700992035936</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1700992035936</updated>
+    </task>
+    <task id="LOCAL-00030" summary="created apigateway and eureka server need to implement service registration">
+      <option name="closed" value="true" />
+      <created>1701001241058</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1701001241058</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -465,10 +515,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add dir frontend, db" />
-    <MESSAGE value="too much stuff" />
-    <MESSAGE value="converted crud op with entitymanager" />
-    <MESSAGE value="update Users class" />
     <MESSAGE value="update" />
     <MESSAGE value="working dao ver" />
     <MESSAGE value="working ver,  todo check expenses db insert" />
@@ -490,7 +536,11 @@
     <MESSAGE value="update general-config cloud server" />
     <MESSAGE value="expense project refactor" />
     <MESSAGE value="swagger-ui working, cod gen must be on the same package of boot app" />
-    <option name="LAST_COMMIT_MESSAGE" value="swagger-ui working, cod gen must be on the same package of boot app" />
+    <MESSAGE value="created core implemented api /expense GET to return all the expenses" />
+    <MESSAGE value="created documentation for the project architecture" />
+    <MESSAGE value="implemented webclient call to core api /expense GET" />
+    <MESSAGE value="created apigateway and eureka server need to implement service registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="created apigateway and eureka server need to implement service registration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -501,28 +551,28 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/Expenses/controller/TestController.java</url>
+          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/expenses/controller/TestController.java</url>
           <line>17</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/Expenses/controller/TestController.java</url>
+          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/expenses/controller/TestController.java</url>
           <line>12</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/Expenses/command/ExpensesCommand.java</url>
+          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/expenses/command/ExpensesCommand.java</url>
           <line>15</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/Expenses/ExpensesApplication.java</url>
+          <url>file://$PROJECT_DIR$/backend/Expenses/src/main/java/com/projectalt96/expenses/ExpensesApplication.java</url>
           <line>6</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/backend/core/src/main/java/com/projectalt96/core/CoreApplication.java</url>
-          <line>6</line>
+          <line>8</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>

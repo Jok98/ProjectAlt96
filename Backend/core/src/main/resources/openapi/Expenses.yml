@@ -112,8 +112,6 @@ components:
       ExpenseDTO:
         type: object
         description: Data element for Expense
-        required:
-          - email
         properties:
           id:
             type: string
