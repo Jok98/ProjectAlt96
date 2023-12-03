@@ -4,35 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189c80a9-363c-4bd0-9c93-fba0b2ae50c3" name="Changes" comment="created apigateway and eureka server need to implement service registration">
-      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/config/EurekaClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/connector/FeignClientConnectorInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/projectalt96/apigateway/config/EurekaClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/projectalt96/apigateway/filter/LoggingGlobalFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/config/EurekaClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/model/ExpenseDTOWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="189c80a9-363c-4bd0-9c93-fba0b2ae50c3" name="Changes" comment="apigateway and bffe Expenses are registered in Eureka server">
+      <change afterPath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/projectalt96/apigateway/config/LoadBalancedRoutesConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/ExpensesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/ExpensesApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/delegate/ExpenseDelegateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/delegate/ExpenseDelegateImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/service/ExpensesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/service/ExpensesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/connector/FeignClientConnectorInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/java/com/projectalt96/expenses/connector/FeignClientConnectorInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Expenses/src/test/java/com/projectalt96/expenses/ExpensesApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Expenses/src/test/java/com/projectalt96/expenses/ExpensesApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/apigateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/apigateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/projectalt96/apigateway/ApigatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/projectalt96/apigateway/ApigatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/projectalt96/apigateway/config/LocalHostRouteConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/projectalt96/apigateway/config/LocalHostRouteConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/apigateway/src/main/java/com/projectalt96/apigateway/config/LocalHostRouteConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/apigateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/apigateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/config_info.md" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/config_info.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/CoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/CoreApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/delegate/expenses/ExpenseDelegateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/delegate/expenses/ExpenseDelegateImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/core/src/main/java/com/projectalt96/core/model/ExpenseDTOWrapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/core/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/core/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/core/src/main/resources/openapi/Expenses.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/core/src/main/resources/openapi/Expenses.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/eurekaserver/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/eurekaserver/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +83,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -234,19 +217,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.ExpensesApplication" />
       <item itemvalue="Application.ApigatewayApplication" />
       <item itemvalue="Application.EurekaserverApplication" />
       <item itemvalue="Application.CoreApplication" />
-      <item itemvalue="Application.com.projectalt96.Expenses.ExpensesApplication" />
       <item itemvalue="Docker.backend/docker-compose.yaml.db: Compose Deployment" />
       <item itemvalue="Maven.ProjectAlt96" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ApigatewayApplication" />
-        <item itemvalue="Application.EurekaserverApplication" />
         <item itemvalue="Application.CoreApplication" />
-        <item itemvalue="Application.com.projectalt96.Expenses.ExpensesApplication" />
+        <item itemvalue="Application.EurekaserverApplication" />
+        <item itemvalue="Application.ExpensesApplication" />
         <item itemvalue="Docker.backend/docker-compose.yaml.db: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -500,7 +483,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701001241058</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="apigateway and bffe Expenses are registered in Eureka server">
+      <option name="closed" value="true" />
+      <created>1701551942866</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1701551942866</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -515,7 +506,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update" />
     <MESSAGE value="working dao ver" />
     <MESSAGE value="working ver,  todo check expenses db insert" />
     <MESSAGE value="implemented testCrudUser" />
@@ -540,7 +530,8 @@
     <MESSAGE value="created documentation for the project architecture" />
     <MESSAGE value="implemented webclient call to core api /expense GET" />
     <MESSAGE value="created apigateway and eureka server need to implement service registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="created apigateway and eureka server need to implement service registration" />
+    <MESSAGE value="apigateway and bffe Expenses are registered in Eureka server" />
+    <option name="LAST_COMMIT_MESSAGE" value="apigateway and bffe Expenses are registered in Eureka server" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -6,13 +6,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class LocalHostRouteConfig {
+public class LoadBalancedRoutesConfig {
     @Bean
-    public RouteLocator localHostRoutes(RouteLocatorBuilder builder) {
+    public RouteLocator loadBalancedRoutes(RouteLocatorBuilder builder) {
 
         return builder.routes()
                 .route(r -> r.path("/expense")
-                        .uri("http://localhost:8090"))
+                        .uri("lb://expense-service"))
                 .build();
     }
 }

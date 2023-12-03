@@ -5,7 +5,6 @@ import com.projectalt96.core.connector.jpa.expenses.model.ExpenseJpa;
 import com.projectalt96.core.dto.ExpenseDTO;
 import com.projectalt96.core.dto.RetrieveExpensesResponse;
 import com.projectalt96.core.mapper.expenses.ExpensesMapper;
-import com.projectalt96.core.model.ExpenseDTOWrapper;
 import com.projectalt96.core.service.expenses.ExpensesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -35,7 +34,6 @@ public class ExpenseDelegateImpl implements ExpenseApiDelegate {
             expenseDTOList.add(expensesMapper.expenseJpaEntityToExpense(expenseJpa));
         });
         System.out.println(expenseDTOList);
-        ExpenseDTOWrapper expenseDTOWrapper = new ExpenseDTOWrapper(expenseDTOList);
         responseEntity.setExpenses(expenseDTOList);
         return ResponseEntity.ok(responseEntity);
     }
