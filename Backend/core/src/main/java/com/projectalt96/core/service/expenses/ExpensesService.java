@@ -2,8 +2,6 @@ package com.projectalt96.core.service.expenses;
 
 import com.projectalt96.core.connector.jpa.expenses.ExpensesJpaRepository;
 import com.projectalt96.core.connector.jpa.expenses.model.ExpenseJpa;
-import com.projectalt96.core.dto.ExpenseDTO;
-import com.projectalt96.core.mapper.expenses.ExpensesMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,4 +16,7 @@ public class ExpensesService {
         return expenseJpaList;
     }
 
+    public void deleteExpenseById(String id) {
+        expensesJpaRepository.deleteById(id);
+    }
 }

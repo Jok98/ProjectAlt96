@@ -37,4 +37,31 @@ public class ExpenseDelegateImpl implements ExpenseApiDelegate {
         responseEntity.setExpenses(expenseDTOList);
         return ResponseEntity.ok(responseEntity);
     }
+
+    @Override
+    public ResponseEntity<Boolean> deleteExpenseById(String id) {
+        try {
+            expensesService.deleteExpenseById(id);
+            return ResponseEntity.ok(true);
+        } catch (Exception e) {
+            return ResponseEntity.ok(false);
+        }
+    }
+
+    @Override
+    public ResponseEntity<ExpenseDTO> getExpenseById(String id) {
+        return ExpenseApiDelegate.super.getExpenseById(id);
+    }
+
+
+
+    @Override
+    public ResponseEntity<ExpenseDTO> saveExpense(ExpenseDTO expenseDTO) {
+        return ExpenseApiDelegate.super.saveExpense(expenseDTO);
+    }
+
+    @Override
+    public ResponseEntity<ExpenseDTO> updateExpenseById(String id, ExpenseDTO expenseDTO) {
+        return ExpenseApiDelegate.super.updateExpenseById(id, expenseDTO);
+    }
 }
