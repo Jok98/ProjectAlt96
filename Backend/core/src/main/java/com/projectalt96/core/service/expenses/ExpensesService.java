@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ExpensesService {
@@ -18,5 +19,17 @@ public class ExpensesService {
 
     public void deleteExpenseById(String id) {
         expensesJpaRepository.deleteById(id);
+    }
+
+    public Optional<ExpenseJpa> getExpenseById(String id) {
+        return expensesJpaRepository.findById(id);
+    }
+
+    public void saveExpense(ExpenseJpa expenseJpa){
+        expensesJpaRepository.save(expenseJpa);
+    }
+
+    public void updateExpense(ExpenseJpa expenseJpa) {
+        expensesJpaRepository.save(expenseJpa);
     }
 }

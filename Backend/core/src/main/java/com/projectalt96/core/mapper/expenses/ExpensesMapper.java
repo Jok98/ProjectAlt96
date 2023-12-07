@@ -17,4 +17,15 @@ public class ExpensesMapper {
         expense.setCategory(expenseEntity.getCategory());
         return expense;
     }
+
+    public ExpenseJpa expenseEntityToExpenseJpa(ExpenseDTO expenseEntity) {
+        ExpenseJpa expense = new ExpenseJpa();
+        expense.setId(expenseEntity.getId());
+        expense.setName(expenseEntity.getName());
+        expense.setDescription(expenseEntity.getDescription());
+        expense.setAmount(expenseEntity.getAmount());
+        expense.setDate(expenseEntity.getDate());
+        expense.setCategory(expenseEntity.getCategory());
+        return expense;
+    }
 }

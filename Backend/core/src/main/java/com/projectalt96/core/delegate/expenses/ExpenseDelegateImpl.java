@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ExpenseDelegateImpl implements ExpenseApiDelegate {
@@ -25,7 +26,7 @@ public class ExpenseDelegateImpl implements ExpenseApiDelegate {
     }
 
     @Override
-//    http://localhost:8090/expense GET
+    //    http://localhost:8090/expense GET
     public ResponseEntity<RetrieveExpensesResponse> getExpensesList() {
         RetrieveExpensesResponse responseEntity = new RetrieveExpensesResponse();
         List<ExpenseJpa> expenseJpaList = expensesService.getExpensesList();
@@ -39,6 +40,7 @@ public class ExpenseDelegateImpl implements ExpenseApiDelegate {
     }
 
     @Override
+    //    http://localhost:8090/expense/{id} DELETE
     public ResponseEntity<Boolean> deleteExpenseById(String id) {
         try {
             expensesService.deleteExpenseById(id);
@@ -49,19 +51,38 @@ public class ExpenseDelegateImpl implements ExpenseApiDelegate {
     }
 
     @Override
+    //    http://localhost:8090/expense/{id} GET
     public ResponseEntity<ExpenseDTO> getExpenseById(String id) {
-        return ExpenseApiDelegate.super.getExpenseById(id);
+        Optional<ExpenseJpa> expenseJpa = expensesService.getExpenseById(id);
+        if (expenseJpa.isPresent()){
+            ExpenseDTO expenseDTO = expensesMapper.expenseJpaEntityToExpense(expenseJpa.get());
+            return ResponseEntity.ok(expenseDTO);
+        }else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
 
 
     @Override
-    public ResponseEntity<ExpenseDTO> saveExpense(ExpenseDTO expenseDTO) {
-        return ExpenseApiDelegate.super.saveExpense(expenseDTO);
+    //    http://localhost:8090/expense POST body-> ExpenseDTO (JSON) entity
+    public ResponseEntity<Boolean> saveExpense(ExpenseDTO expenseDTO) {
+        try {
+            expensesService.saveExpense(expensesMapper.expenseEntityToExpenseJpa(expenseDTO));
+            return ResponseEntity.ok(true);
+        } catch (Exception e) {
+            return ResponseEntity.ok(false);
+        }
     }
 
     @Override
-    public ResponseEntity<ExpenseDTO> updateExpenseById(String id, ExpenseDTO expenseDTO) {
-        return ExpenseApiDelegate.super.updateExpenseById(id, expenseDTO);
+    //    http://localhost:8090/expense PUT body-> ExpenseDTO (JSON) entity
+    public ResponseEntity<Boolean> updateExpenseById(String id, ExpenseDTO expenseDTO) {
+        try {
+            expensesService.updateExpense(expensesMapper.expenseEntityToExpenseJpa(expenseDTO));
+            return ResponseEntity.ok(true);
+        } catch (Exception e) {
+            return ResponseEntity.ok(false);
+        }
     }
 }
