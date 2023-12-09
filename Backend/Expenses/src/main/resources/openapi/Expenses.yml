@@ -61,28 +61,28 @@ paths:
         '404':
           description: No expenses found
 
-    put:
-      summary: Update Expense By Id
-      operationId: updateExpenseById
-      parameters:
-        - name: id
-          in: path
-          description: Unique Id of an Expense
-          required: true
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ExpenseDTO'
-      responses:
-        200:
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: boolean
+#    put:
+#      summary: Update Expense By Id
+#      operationId: updateExpenseById
+#      parameters:
+#        - name: id
+#          in: path
+#          description: Unique Id of an Expense
+#          required: true
+#          schema:
+#            type: string
+#      requestBody:
+#        content:
+#          application/json:
+#            schema:
+#              $ref: '#/components/schemas/ExpenseDTO'
+#      responses:
+#        200:
+#          description: OK
+#          content:
+#            application/json:
+#              schema:
+#                type: boolean
 
     delete:
       summary: Delete Expense By Id

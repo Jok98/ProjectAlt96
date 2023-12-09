@@ -12,10 +12,10 @@ public interface FeignClientConnectorInterface {
     ResponseEntity<RetrieveExpensesResponse> getExpensesList();
 
     @DeleteMapping("/expense/{id}")
-    ResponseEntity<Boolean> deleteExpenseById(String id);
+    ResponseEntity<Boolean> deleteExpenseById(@RequestParam String id);
 
     @GetMapping("/expense/{id}")
-    ResponseEntity<ExpenseDTO> getExpenseById(String id);
+    ResponseEntity<ExpenseDTO> getExpenseById(@RequestParam String id);
 
     @PostMapping("/expense")
     ResponseEntity<Boolean> createExpense(@RequestBody ExpenseDTO expenseDTO);
