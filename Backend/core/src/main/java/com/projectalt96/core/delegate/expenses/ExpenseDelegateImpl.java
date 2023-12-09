@@ -62,8 +62,6 @@ public class ExpenseDelegateImpl implements ExpenseApiDelegate {
         }
     }
 
-
-
     @Override
     //    http://localhost:8090/expense POST body-> ExpenseDTO (JSON) entity
     public ResponseEntity<Boolean> saveExpense(ExpenseDTO expenseDTO) {
