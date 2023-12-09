@@ -11,7 +11,7 @@ public class LoadBalancedRoutesConfig {
     public RouteLocator loadBalancedRoutes(RouteLocatorBuilder builder) {
 
         return builder.routes()
-                .route(r -> r.path("/expense")
+                .route(r -> r.path("/expense/**")
                         .uri("lb://expense-service"))
                 .build();
     }
