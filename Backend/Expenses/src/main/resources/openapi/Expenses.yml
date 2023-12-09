@@ -38,7 +38,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ExpenseDTO'
+                type: boolean
 
   /expense/{id}:
     get:
@@ -58,6 +58,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ExpenseDTO'
+        '404':
+          description: No expenses found
 
     put:
       summary: Update Expense By Id
@@ -80,7 +82,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ExpenseDTO'
+                type: boolean
 
     delete:
       summary: Delete Expense By Id
@@ -98,7 +100,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ExpenseDTO'
+                type: boolean
 components:
   schemas:
     RetrieveExpensesResponse:
@@ -112,8 +114,6 @@ components:
     ExpenseDTO:
       type: object
       description: Data element for Expense
-      required:
-        - email
       properties:
         id:
           type: string
