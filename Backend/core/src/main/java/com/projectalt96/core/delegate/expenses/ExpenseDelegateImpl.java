@@ -20,11 +20,9 @@ public class ExpenseDelegateImpl implements ExpenseApiDelegate {
     private final ExpensesService expensesService;
     @Autowired
     ExpensesMapper expensesMapper;
-
     public ExpenseDelegateImpl(ExpensesService expensesService) {
         this.expensesService = expensesService;
     }
-
     @Override
     //    http://localhost:8090/expense GET
     public ResponseEntity<RetrieveExpensesResponse> getExpensesList() {
@@ -49,7 +47,6 @@ public class ExpenseDelegateImpl implements ExpenseApiDelegate {
             return ResponseEntity.ok(false);
         }
     }
-
     @Override
     //    http://localhost:8090/expense/{id} GET
     public ResponseEntity<ExpenseDTO> getExpenseById(String id) {
@@ -61,23 +58,11 @@ public class ExpenseDelegateImpl implements ExpenseApiDelegate {
             return ResponseEntity.notFound().build();
         }
     }
-
     @Override
     //    http://localhost:8090/expense POST body-> ExpenseDTO (JSON) entity
     public ResponseEntity<Boolean> saveExpense(ExpenseDTO expenseDTO) {
         try {
             expensesService.saveExpense(expensesMapper.expenseEntityToExpenseJpa(expenseDTO));
-            return ResponseEntity.ok(true);
-        } catch (Exception e) {
-            return ResponseEntity.ok(false);
-        }
-    }
-
-    @Override
-    //    http://localhost:8090/expense PUT body-> ExpenseDTO (JSON) entity
-    public ResponseEntity<Boolean> updateExpenseById(String id, ExpenseDTO expenseDTO) {
-        try {
-            expensesService.updateExpense(expensesMapper.expenseEntityToExpenseJpa(expenseDTO));
             return ResponseEntity.ok(true);
         } catch (Exception e) {
             return ResponseEntity.ok(false);
